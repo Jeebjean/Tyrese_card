@@ -21,11 +21,8 @@
         integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4=" crossorigin="anonymous" />
 
     <section class="candidates-profile-bg">
+        <img class="logo" src="photo/logo.png" alt="" width="20%">
         <div class="bg-overlay"></div>
-
-    </section>
-
-    <section class="section">
 
         <div class="container info-box">
             <div class="row justify-content-center">
@@ -33,11 +30,13 @@
                     <div class="candidates-profile-details text-center">
                         <img src="photo/profile.png"
                             class="img-fluid d-block mx-auto rounded-circle img-thumbnail mb-4">
-                        <h2 class="text  candidates-profile-name mb-2">Tyrese Evans</h2>
-                        <p class="text mb-2" style="font-size: 12px;"><i class="mdi mdi-bank mr-2"></i>A HOWLING GOOD
+                        <h2 class="text-white  candidates-profile-name mb-2">Tyrese Evans</h2>
+                        <p class="text-white-50 mb-2" style="font-size: 16px;"><i class="mdi mdi-bank mr-2"></i>A
+                            HOWLING GOOD
                             TIME DOG TRAINING LLC</p>
                         <ul class="candidates-profile-icons list-inline mb-3">
-                            <li class="list-inline-item text pr-2 f-16" style="font-size: 12px;">Training Director
+                            <li class="list-inline-item text-white-50 pr-2 f-16" style="font-size: 16px;">Training
+                                Director
                             </li>
                             <li class="list-inline-item"><a href="" class="text-warning"><i
                                         class="mdi mdi-star"></i></a></li>
@@ -52,19 +51,23 @@
                         </ul>
 
                         <ul class="candidates-profile-social-icons list-inline mb-0">
-                            <li class="list-inline-item"><a href="https://www.facebook.com/ahowlinggoodtime/"
-                                    target="_blank" class=""><i class="mdi mdi-facebook"></i></a></li>
+                            <li class="list-inline-item facebook"><a href="https://www.facebook.com/ahowlinggoodtime/"
+                                    target="_blank" class=""><i class="mdi mdi-facebook facebook"></i></a></li>
 
-                            <li class="list-inline-item"><a href="https://www.instagram.com/ahowling_goodtime/"
-                                    target="_blank" class=""><i class="mdi mdi-instagram"></i></a></li>
-                            <li class="list-inline-item"><a href="mailto:tyrese2423@gmail.com" class=""><i
-                                        class="mdi mdi-google-plus"></i></a>
+                            <li class="list-inline-item red"><a href="https://www.instagram.com/ahowling_goodtime/"
+                                    target="_blank" class=""><i class="mdi mdi-instagram red"></i></a></li>
+                            <li class="list-inline-item red"><a href="mailto:tyrese2423@gmail.com" class=""><i
+                                        class="mdi mdi-google-plus red"></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
+
+    </section>
+
+    <section class="section">
 
         <div class="container">
             <div class="row">
@@ -230,16 +233,22 @@
         }
 
         .candidates-profile-bg {
-            padding: 100px 0px 100px 0px;
-            background-image: url("photo/background.png");
+            padding: 180px 0px 80px 0px;
+            background-image: url("photo/bg.png");
             background-size: cover;
             position: relative;
-            background-position: center center;
+            background-position: center right;
         }
 
 
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+        }
+
         .candidates-profile-details img {
-            max-width: 100px;
+            max-width: 130px;
             background: transparent;
         }
 
@@ -254,15 +263,31 @@
         .candidates-profile-social-icons li a {
             height: 32px;
             width: 32px;
-            color: rgba(252, 3, 3, 0.898);
             text-align: center;
-            font-size: 15px;
+            font-size: 20px;
             display: inline-block;
             line-height: 30px;
             border-radius: 50%;
-            border: 1px solid rgba(252, 3, 3, 0.898);
             -webkit-transition: all 0.5s;
             transition: all 0.5s;
+        }
+
+        .candidates-profile-social-icons .facebook a {
+            border: 1px solid rgb(34, 80, 195);
+        }
+
+        .candidates-profile-social-icons .red a {
+            border: 1px solid rgba(255, 0, 0, 0.773);
+        }
+
+
+
+        .candidates-profile-social-icons .facebook {
+            color: rgb(34, 80, 195);
+        }
+
+        .candidates-profile-social-icons .red {
+            color: rgba(255, 0, 0, 0.773);
         }
 
         .candidates-profile-social-icons li a:hover {
@@ -312,7 +337,7 @@
         }
 
         .job-detail {
-            border: 1px solid rgba(252, 3, 3, 0.898);
+            border: 1px solid rgba(82, 80, 80, 0.289);
             border-radius: 6px;
         }
 
