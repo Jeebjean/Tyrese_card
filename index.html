@@ -56,8 +56,12 @@
 
                             <li class="list-inline-item red"><a href="https://www.instagram.com/ahowling_goodtime/"
                                     target="_blank" class=""><i class="mdi mdi-instagram red"></i></a></li>
-                            <li class="list-inline-item red"><a href="mailto:tyrese2423@gmail.com" class=""><i
-                                        class="mdi mdi-google-plus red"></i></a>
+                            <li class="list-inline-item red"><a href="mailto:ahowlinggoodtime@gmail.com" target="_blank"
+                                    class=""><i class="mdi mdi-google-plus red"></i></a>
+                            </li>
+                            <li class="list-inline-item red"><a
+                                    href="https://youtube.com/shorts/UPydE8eF37g?feature=share" target="_blank"
+                                    class=""><i class="mdi mdi-youtube red"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -92,7 +96,7 @@
                             <li class=" mr-3">
                                 <a href="mailto:tyrese2423@gmail.com" class="text-muted f-15 mb-0"><i
                                         class="mdi mdi-email mr-2"></i><strong>Email:
-                                    </strong>tyrese2423@gmail.com</a>
+                                    </strong>ahowlinggoodtime@gmail.com</a>
                             </li>
 
                             <hr>
@@ -110,6 +114,12 @@
                                 <a href="" class="text-muted f-15 mb-0"><i
                                         class="mdi mdi-map-marker mr-2"></i><strong>Address: </strong>Madison,
                                     Wisconsin</a>
+                            </li>
+
+                            <hr>
+
+                            <li class=" mr-3">
+                                <button id="save-button">Sauvegarder</button>
                             </li>
 
                         </ul>
@@ -175,6 +185,12 @@
             </div>
 
             <div class="row">
+                <div class="col-lg-4">
+                    <div class="job-detail candidates-profile-education text-center text-muted mb-5 mt-5">
+                        <img src="photo/1.JPG" alt="" width="100%">
+                    </div>
+                </div>
+
                 <div class="col-lg-4">
                     <div class="job-detail candidates-profile-education text-center text-muted mb-5 mt-5">
                         <img src="photo/MEDIA.JPG" alt="" width="100%">
@@ -394,10 +410,41 @@
         .info-box {
             margin: 0 0 80px 0;
         }
+
+        button {
+            text-align: center;
+            border: 1px solid rgba(128, 128, 128, 0.492);
+            padding: 5px 10px;
+            font-size: 14px;
+            border-radius: 10px;
+            width: 100%;
+        }
     </style>
 
     <script type="text/javascript">
+        // Define the vCard fields
+        var vcardString = 'BEGIN:VCARD\n';
+        vcardString += 'VERSION:3.0\n';
+        vcardString += 'N:Tyrese;Evans;;;\n';
+        vcardString += 'FN:Tyrese Evans\n';
+        vcardString += 'TEL;TYPE=Mobile,voice:+1(608) 239 8718\n';
+        vcardString += 'EMAIL:ahowlinggoodtime@gmail.com\n';
+        vcardString += 'URL;TYPE=Website:www.ahowlinggoodtimetraining.com\n';
+        vcardString += 'TITLE:Training Director\n';
+        vcardString += 'END:VCARD\n';
 
+        // Attach an event handler to the save button
+        document.getElementById('save-button').addEventListener('click', function () {
+            // Create an anchor element with a data URI that contains the vCard string
+            var a = document.createElement('a');
+            a.href = 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vcardString);
+
+            // Set the download attribute to the desired filename
+            a.download = 'contact.vcf';
+
+            // Click the anchor element to trigger the download
+            a.click();
+        });
     </script>
 </body>
 
