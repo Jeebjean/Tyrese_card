@@ -220,19 +220,19 @@
 
                 <div class="col-lg-4">
                     <div class="job-detail candidates-profile-education text-center text-muted mb-5 mt-5">
-                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/9HKrR9NgquQ"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                        <video width="100%" controls poster="photo/logo.png">
+                            <source src="photo/vid1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
 
                 <div class="col-lg-4">
                     <div class="job-detail candidates-profile-education text-center text-muted mb-5 mt-5">
-                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/pPFjKf2Y4lU"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                        <video width="100%" controls poster="photo/logo.png">
+                            <source src="photo/vid2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
 
@@ -256,17 +256,29 @@
 
         .candidates-profile-bg {
             padding: 180px 0px 80px 0px;
-            background-image: url("photo/bg.png");
+            background-image: url("photo/bg.JPG");
             background-size: cover;
             position: relative;
-            background-position: center right;
+            background-position: center center;
         }
+
+        .bg-overlay {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 0;
+            background-color: #000000b9;
+        }
+
 
 
         .logo {
             position: absolute;
             top: 20px;
             right: 30px;
+            z-index: 10;
         }
 
         .candidates-profile-details img {
